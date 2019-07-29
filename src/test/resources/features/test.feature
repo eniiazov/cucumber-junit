@@ -2,7 +2,7 @@
 Feature: Amazon verification
   User Story: US44
   #Comments goes using this sign
-  @amazon1
+  @amazon
   Scenario: Amazon title verification
     When User is on Amazon application
     Then User should see Amazon in title

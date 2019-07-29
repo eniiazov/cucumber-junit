@@ -21,6 +21,7 @@ public class MultipleData_steps {
 
     @Then("User closes the amazon")
     public void user_closes_the_amazon() {
+
         Driver.quitDriver();
     }
 }
