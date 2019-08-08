@@ -32,7 +32,7 @@ public class Etsy_Steps {
         String actualTitle = Driver.getDriver().getTitle();
         String expectedTitle = string + " | Etsy";
 
-        Assert.assertTrue(actualTitle.equalsIgnoreCase(expectedTitle));
+        Assert.assertTrue(actualTitle.equalsIgnoreCase("someTile"));
 
     }
 }
