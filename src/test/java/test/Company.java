@@ -1,10 +1,21 @@
 package test;
 
+import java.util.List;
+
 public class Company {
 
     private String company;
     private String title;
-    private Address address;
+    private List<Address> address;
+
+
+    public List<Address> getAddress() {
+        return address;
+    }
+
+    public void setAddress(List<Address> address) {
+        this.address = address;
+    }
 
     public String getCompany() {
         return company;
@@ -20,13 +31,5 @@ public class Company {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
     }
 }

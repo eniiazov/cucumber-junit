@@ -23,7 +23,22 @@ public class JsonMapping {
                 "        \t\t}\n" +
                 "        \t}";
 
-
+        String listOfJson ="{\n" +
+                "        \t\t\"company\": \"Goolge\",\n" +
+                "        \t\t\"title\": \"Automation\",\n" +
+                "        \t\t\"address\":[\n" +
+                "        \t\t\t{\n" +
+                "\t\t    \t\t\t\"street\":\"13 N. Main st\",\n" +
+                "\t\t    \t\t\t\"city\": \"Chicago\"\n" +
+                "\t\t    \t\t},\n" +
+                "\n" +
+                "\t\t    \t\t{\n" +
+                "\t\t    \t\t\t\"street\":\"123 N. Main st\",\n" +
+                "\t\t    \t\t\t\"city\": \"Chicago\"\n" +
+                "        \t\t\t}\n" +
+                "        \t\t\t\n" +
+                "        \t\t]\n" +
+                "        \t}";
 
         ObjectMapper mapper = new ObjectMapper();
 
@@ -31,10 +46,9 @@ public class JsonMapping {
 //            Teacher teacher = mapper.readValue(jsonBody, Teacher.class);
 //            System.out.println(teacher.getName());
 //            System.out.println(teacher.getSubject());
-        Company company = mapper.readValue(companyJson, Company.class);
+        Company company = mapper.readValue(listOfJson, Company.class);
 
-            System.out.println(company.getAddress().getStreet());
-
+            System.out.println(company.getAddress().get(0).getStreet());
 
         } catch (IOException e) {
             e.printStackTrace();
