@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MappingClass {
 
@@ -85,13 +86,22 @@ public class MappingClass {
 
         try {
             MyResponse myResponse = mapper.readValue(response.asString(), MyResponse.class);
-            String firstName = myResponse.getTeachers().get(1).getFirstName();
-            System.out.println(firstName);
+            List<Teacher> myTeachers = myResponse.getTeachers();
+
+            for(Teacher teacher: myTeachers){
+                if(teacher.getBatch()==11){
+                    System.out.println("FirstName: "+teacher.getFirstName()+" batch : "+teacher.getBatch());
+                }
+            }
 
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        // get batch 11 first name
+
+
 
 
     }
