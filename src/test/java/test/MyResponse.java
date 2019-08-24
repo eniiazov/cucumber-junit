@@ -1,5 +1,7 @@
 package test;
 
+import models.Teacher;
+
 import java.util.List;
 
 public class MyResponse {
