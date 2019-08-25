@@ -20,4 +20,4 @@ Feature: Teacher API module
 
     When user hits the web service "http://api.cybertektraining.com/teacher/create"
     Then verify status code "200"
-    And verify with Database
+    And verify response with Database
