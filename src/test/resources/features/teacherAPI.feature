@@ -18,5 +18,6 @@ Feature: Teacher API module
       | department	 |	Maths		|
       | password	 |   123abc		|
 
-    When user hits the web service "url"
+    When user hits the web service "http://api.cybertektraining.com/teacher/create"
     Then verify status code "200"
+    And verify with Database
