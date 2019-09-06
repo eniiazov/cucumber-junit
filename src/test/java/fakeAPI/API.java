@@ -28,8 +28,6 @@ public class API {
         DB.getUsers("hello321").add(user);
         return "201 - User Created";
 
-
-
     }
 
     // API 2:
